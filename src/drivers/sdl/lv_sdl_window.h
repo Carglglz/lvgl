@@ -51,6 +51,12 @@ void lv_sdl_window_set_title(lv_display_t * disp, const char * title);
 
 void lv_sdl_window_set_icon(lv_display_t * disp, void * icon, int32_t width, int32_t height);
 
+void lv_sdl_window_set_position(lv_display_t * disp, int x, int y);
+
+int lv_sdl_window_set_opacity(lv_display_t * disp, float opacity);
+
+void lv_sdl_window_set_bordered(lv_display_t * disp, int bordered);
+
 void * lv_sdl_window_get_renderer(lv_display_t * disp);
 
 void lv_sdl_quit(void);

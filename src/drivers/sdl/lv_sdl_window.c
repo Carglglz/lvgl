@@ -200,6 +200,24 @@ void lv_sdl_window_set_icon(lv_display_t * disp, void * icon, int32_t width, int
                                                                    SDL_PIXELFORMAT_ARGB8888);
     SDL_SetWindowIcon(dsc->window, iconSurface);
     SDL_FreeSurface(iconSurface);
+
+}
+void lv_sdl_window_set_position(lv_display_t * disp, int x, int y)
+{
+    lv_sdl_window_t * dsc = lv_display_get_driver_data(disp);
+    SDL_SetWindowPosition(dsc->window, x, y);
+}
+
+int lv_sdl_window_set_opacity(lv_display_t * disp, float opacity)
+{
+    lv_sdl_window_t * dsc = lv_display_get_driver_data(disp);
+    return SDL_SetWindowOpacity(dsc->window, opacity);
+}
+
+void lv_sdl_window_set_bordered(lv_display_t * disp, int bordered)
+{
+    lv_sdl_window_t * dsc = lv_display_get_driver_data(disp);
+    SDL_SetWindowBordered(dsc->window, bordered);
 }
 
 void * lv_sdl_window_get_renderer(lv_display_t * disp)
