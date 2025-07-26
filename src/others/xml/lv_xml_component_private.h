@@ -43,6 +43,7 @@ struct _lv_xml_component_scope_t {
     uint32_t is_widget : 1;
     uint32_t is_screen : 1;
     struct _lv_xml_component_scope_t * next;
+    void * user_data;
 };
 
 typedef struct {
