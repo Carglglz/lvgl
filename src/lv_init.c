@@ -399,7 +399,9 @@ void lv_init(void)
 #endif
 
 #if LV_USE_XML
-    lv_xml_init();
+    #ifndef LV_GC_INIT
+        lv_xml_init();
+    #endif
 #endif
 
     lv_initialized = true;
